@@ -54,6 +54,7 @@ flowchart TD
     A(Start) --> B[/Input name/]
     B --> C[/Display Hello, name!/]
     C --> D(Stop)
+```
 ---
 
 # 2
@@ -122,7 +123,7 @@ END
 ```mermaid
 flowchart TD
     A(Start) --> B[count = 1<br>num_of_times = 3<br>sum = 0]
-    B -> C{While<br>count <= num_of_times}
+    B --> C{While<br>count <= num_of_times}
     C -- Yes --> D[/Input Number/]
     D --> E[sum = sum + number]
     E --> F[count = count + 1]
@@ -143,10 +144,10 @@ BEGIN
     PRINT "Hello, " + name + "!"
 END
 ```
-### Flowchart
 
+### Flowchart
 ```mermaid
-flowchar TD
+flowchart TD
     A(Start) --> B[/Input name]
     B --> C[/Display "Hello, name,"!"/]
     C --> D(Stop)
@@ -169,7 +170,7 @@ END
 ```mermaid
 flowchart TD
     A(Start) --> B[/Input number1, number2/]
-    B --> C[addition=number1+number2<br> subtraction=number1-number2<br> multiplication=number1*number2<br> division=number1/number2]
+    B --> C[addition=number1+number2<br>subtraction=number1-number2<br>multiplication=number1*number2<br>division=number1/number2]
     C --> D[/Display addition, subtraction, multiplication, division/]
     D --> E(Stop)
 ```
@@ -202,7 +203,43 @@ flowchart TD
 # 8
 
 ### Pseudocode
+```text
+BEGIN
+    GENERATE random_number
+    SET count = 1
+    REPEAT
+        Input user_number
+
+        IF userNumber < randNumber THEN
+            PRINT "Your guess was too small!"
+            count++
+        ELSE IF userNumber > randNumber THEN
+            PRINT "Your guess was too big!"
+            count++
+        END IF
+    UNTIL userNumber == random_number
+    PRINT "Your guess is Correct!"
+    PRINT "You have made " + count + " number of guesses"
+END
+```
 
 ### Flowchart
+```mermaid
+flowchart TD
+    A(Start) --> B[Generate random_number]
+    B --> C[count = 1]
+    C --> D[/Input user_number/]
+    D --> E{Is user_number < random_number?}
+    E -- Yes --> F[Display "Your guess was too small!"]
+    F --> G[count=count+1]
+    G --> D
+    E -- No --> H{Is user_number > random_number?}
+    H -- Yes --> I[Display "Your guess was too big!"]
+    I --> J[count=count+1]
+    J --> D
+    H -- No --> K[Display "Your guess is Correct!"]
+    K --> L[Print "You have made " + count + " number of guesses"]
+    L --> M(Stop)
+```
 
 ---
