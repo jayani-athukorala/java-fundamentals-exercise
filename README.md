@@ -45,17 +45,15 @@ Code → Open with Codespaces → New codespace
 ```text
 BEGIN
     SET name = "Jayani"
-    PRINT "Hello",name,"!"
+    PRINT "Hello, \n" + name + "!"
 END
 ```
 ### Flowchart
-
 ```mermaid
-flowchar TD
-    A(Start) --> B[name="Jayani"]
-    B --> C[/Display "Hello, ",name,"!"/]
+flowchart TD
+    A(Start) --> B[/Input name/]
+    B --> C[/Display Hello, name!/]
     C --> D(Stop)
-```
 ---
 
 # 2
@@ -75,7 +73,7 @@ END
 ```mermaid
 flowchart TD
     A(Start) --> B[/Input year/]
-    B --> C{"year % 4 == 0 AND NOT(year % 100 == 0 AND NOT(year % 400 == 0))"}
+    B --> C{"If year % 4 == 0 AND NOT(year % 100 == 0 AND NOT(year % 400 == 0))"}
     C -- Yes --> D[/Display "A leap year"/]
     C -- No --> E[/Display "Not a leap year"/]
     D --> F(Stop)
@@ -99,7 +97,7 @@ END
 ```mermaid
 flowchart TD
     A(Start) --> B[number1 = 120, number2 = 120]
-    B --> C[addition=number1+number2<br> subtraction=number1-number2<br> multiplication=number1*number2<br> division=number1/number2]
+    B --> C[addition=number1+number2<br>subtraction=number1-number2<br>multiplication=number1*number2<br>division=number1/number2]
     C --> D[/Display addition, subtraction, multiplication, division/]
     D --> E(Stop)
 ```
@@ -142,7 +140,7 @@ flowchart TD
 ```text
 BEGIN
     INPUT name
-    PRINT "Hello, ",name,"!"
+    PRINT "Hello, " + name + "!"
 END
 ```
 ### Flowchart
@@ -150,7 +148,7 @@ END
 ```mermaid
 flowchar TD
     A(Start) --> B[/Input name]
-    B --> C[/Display "Hello, ",name,"!"/]
+    B --> C[/Display "Hello, name,"!"/]
     C --> D(Stop)
 ```
 ---
@@ -179,9 +177,26 @@ flowchart TD
 
 # 7
 ### Pseudocode
+```text
+BEGIN
+    INPUT time_in_seconds
+    hours = time_in_seconds/3600
+    minues = time_in_seconds%3600/60
+    seconds = time_in_seconds/3600%60
+    PRINT hours:minutes:seconds
+END
+```
 
 ### Flowchart
-
+```mermaid
+flowchart TD
+    A(Start) --> B[/Input time_in_seconds/]
+    B --> C[hours=time_in_seconds/3600]
+    C --> D[minues=time_in_seconds%3600/60]
+    D --> E[seconds=time_in_seconds/3600%60]
+    E --> F[/"Display hours:minutes:seconds"/]
+    F --> G(Stop)
+```
 ---
 
 # 8
