@@ -11,7 +11,7 @@ public class Q7{
         timeInSecond = scanner.nextInt();
 
         String formattedTime = formatTime(timeInSecond);
-        System.out.print("The formatted Time : "+formattedTime);
+        System.out.println("The formatted Time : "+formattedTime);
 
     }
 

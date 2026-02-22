@@ -9,13 +9,13 @@ public class Q4{
         int i = 1, sum = 0, num_of_times = 3;
         
         while(i <= num_of_times){
-            System.out.print("Input first number :");
+            System.out.print("Input number :");
             number = scanner.nextInt();
             sum = sum + number;
             i++;
         }
         double average = sum /num_of_times;
-        System.out.print("Average is "+average);
+        System.out.println("Average is "+average);
         
     }
 }

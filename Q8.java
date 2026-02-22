@@ -25,6 +25,6 @@ public class Q8{
 
         }while(userNumber != randNumber);
 
-        System.out.print("Your guess is Correct!\nNumber of Guesses you have made :"+count);
+        System.out.println("Your guess is Correct!\nYou have made "+count+" number of Guesses ");
     }
 }

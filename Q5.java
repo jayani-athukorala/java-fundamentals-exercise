@@ -9,6 +9,6 @@ public class Q5{
         System.out.print("Enter Your name : ");
         name = scanner.nextLine();
 
-        System.out.println("Hello,"+name+"!");
+        System.out.println("Hello, "+name+"!");
     }
 }
