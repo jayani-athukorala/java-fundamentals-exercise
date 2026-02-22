@@ -45,7 +45,7 @@ Code → Open with Codespaces → New codespace
 ```text
 BEGIN
     SET name = "Jayani"
-    PRINT "Hello,\n",name,"!"
+    PRINT "Hello",name,"!"
 END
 ```
 ### Flowchart
@@ -53,7 +53,7 @@ END
 ```mermaid
 flowchar TD
     A(Start) --> B[name="Jayani"]
-    B --> C[/Display "Hello,\n",Jayani,"!"/]
+    B --> C[/Display "Hello, ",name,"!"/]
     C --> D(Stop)
 ```
 ---
@@ -75,7 +75,7 @@ END
 ```mermaid
 flowchart TD
     A(Start) --> B[/Input year/]
-    B --> C{year % 4 == 0 AND NOT(year % 100 == 0 AND NOT(year % 400 == 0))}
+    B --> C{"year % 4 == 0 AND NOT(year % 100 == 0 AND NOT(year % 400 == 0))"}
     C -- Yes --> D[/Display "A leap year"/]
     C -- No --> E[/Display "Not a leap year"/]
     D --> F(Stop)
