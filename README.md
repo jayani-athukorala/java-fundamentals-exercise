@@ -99,7 +99,7 @@ END
 ### Flowchart
 ```mermaid
 flowchart TD
-    A(Start) --> B[number1 = 120<br>number2 = 120]
+    A(Start) --> B[number1 = 120<br>number2 = 12]
     B --> C[addition=number1+number2<br>subtraction=number1-number2<br>multiplication=number1*number2<br>division=number1/number2]
     C --> D[/Display addition, subtraction, multiplication, division/]
     D --> E(Stop)
@@ -231,18 +231,16 @@ flowchart TD
     A(Start) --> B[Generate random_number]
     B --> C[count = 1]
     C --> D[/Input user_number/]
-    D --> E{Is user_number < random_number?}
+    D --> E{Is<br>user_number < random_number?}
     E -- Yes --> F[/Display "Your guess was too small!"/]
     F --> G[count=count+1]
-    G --> D
-    E -- No --> H{Is user_number > random_number?}
+    E -- No --> H{Is<br>user_number > random_number?}
     H -- Yes --> I[/Display "Your guess was too big!"/]
     I --> J[count=count+1]
-    J --> K{While<br>user_number != random_number}
-    K -- Yes --> D
-    K -- No --> L[/Display "Your guess is Correct!"/]
-    L --> M[/Display "You have made " + count + " number of guesses"/]
-    M --> N(Stop)
+    J --> D
+    I -- No --> K[/Display "Your guess is Correct!"/]
+    K --> L[/Display "You have made " + count + " number of guesses"/]
+    L --> M(Stop)
 ```
 
 ---
