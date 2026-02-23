@@ -76,7 +76,7 @@ END
 ```mermaid
 flowchart TD
     A(Start) --> B[/Input year/]
-    B --> C{"If year % 4 == 0 AND NOT(year % 100 == 0 AND NOT(year % 400 == 0))"}
+    B --> C{"If<br>year % 4 == 0 AND NOT(year % 100 == 0 AND NOT(year % 400 == 0))"}
     C -- Yes --> D[/Display "A leap year"/]
     C -- No --> E[/Display "Not a leap year"/]
     D --> F(Stop)
@@ -99,7 +99,7 @@ END
 ### Flowchart
 ```mermaid
 flowchart TD
-    A(Start) --> B[number1 = 120, number2 = 120]
+    A(Start) --> B[number1 = 120<br>number2 = 120]
     B --> C[addition=number1+number2<br>subtraction=number1-number2<br>multiplication=number1*number2<br>division=number1/number2]
     C --> D[/Display addition, subtraction, multiplication, division/]
     D --> E(Stop)
@@ -238,10 +238,11 @@ flowchart TD
     E -- No --> H{Is user_number > random_number?}
     H -- Yes --> I[/Display "Your guess was too big!"/]
     I --> J[count=count+1]
-    J --> D
-    H -- No --> K[/Display "Your guess is Correct!"/]
-    K --> L[/Display "You have made " + count + " number of guesses"/]
-    L --> M(Stop)
+    J --> K{While<br>user_number != random_number}
+    K -- Yes --> D
+    K -- No --> L[/Display "Your guess is Correct!"/]
+    L --> M[/Display "You have made " + count + " number of guesses"/]
+    M --> N(Stop)
 ```
 
 ---
