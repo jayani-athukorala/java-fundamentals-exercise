@@ -234,6 +234,7 @@ flowchart TD
     D --> E{Is<br>user_number < random_number?}
     E -- Yes --> F[/Display "Your guess was too small!"/]
     F --> G[count=count+1]
+    G --> D
     E -- No --> H{Is<br>user_number > random_number?}
     H -- Yes --> I[/Display "Your guess was too big!"/]
     I --> J[count=count+1]
