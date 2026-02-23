@@ -34,30 +34,32 @@ Code → Open with Codespaces → New codespace
 ```
 ### ...and so on
 
--- 
+---
 
-# Pseudocodes and Flowcharts for each Exercises
+# Pseudocodes and Flowcharts
 
-## 1
+## 1. Print 'Hello' and name on screen (in separate lines)
 
 ### Pseudocode
 
 ```text
 BEGIN
     SET name = "Jayani"
-    PRINT "Hello, \n" + name + "!"
+    PRINT "Hello,"
+    PRINT name
 END
 ```
 ### Flowchart
 ```mermaid
 flowchart TD
     A(Start) --> B[/Input name/]
-    B --> C[/Display Hello, name!/]
-    C --> D(Stop)
+    B --> C[/Display "Hello,"/]
+    C --> D[/Display name+"!"/]
+    D --> E(Stop)
 ```
 ---
 
-# 2
+# 2. Print if a year (User input) is leap or not.
 ### Pseudocode
 ```text
 BEGIN
@@ -82,7 +84,7 @@ flowchart TD
 ```
 ---
 
-# 3
+# 3. Print the sum/multiplication/division and subtraction of two numbers
 ### Pseudocode
 ```text
 BEGIN
@@ -104,7 +106,7 @@ flowchart TD
 ```
 ---
 
-# 4
+# 4. Prints the average of three numbers
 ### Pseudocode
 ```text
 BEGIN
@@ -135,7 +137,7 @@ flowchart TD
 ```
 ---
 
-# 5
+# 5. Print ‘Hello username’ where username get as a user input.
 ### Pseudocode
 
 ```text
@@ -148,13 +150,13 @@ END
 ### Flowchart
 ```mermaid
 flowchart TD
-    A(Start) --> B[/Input name]
+    A(Start) --> B[/Input name/]
     B --> C[/Display "Hello, name,"!"/]
     C --> D(Stop)
 ```
 ---
 
-# 6
+# 6. Print the sum/multiplication/division and subtraction of given numbers (User inputs).
 ### Pseudocode
 ```text
 BEGIN
@@ -176,7 +178,7 @@ flowchart TD
 ```
 ---
 
-# 7
+# 7. Convert seconds to hours, minutes and seconds
 ### Pseudocode
 ```text
 BEGIN
@@ -200,7 +202,7 @@ flowchart TD
 ```
 ---
 
-# 8
+# 8. Generates a random number and let the user to guess the generated number.
 
 ### Pseudocode
 ```text
@@ -230,15 +232,15 @@ flowchart TD
     B --> C[count = 1]
     C --> D[/Input user_number/]
     D --> E{Is user_number < random_number?}
-    E -- Yes --> F[Display "Your guess was too small!"]
+    E -- Yes --> F[/Display "Your guess was too small!"/]
     F --> G[count=count+1]
     G --> D
     E -- No --> H{Is user_number > random_number?}
-    H -- Yes --> I[Display "Your guess was too big!"]
+    H -- Yes --> I[/Display "Your guess was too big!"/]
     I --> J[count=count+1]
     J --> D
-    H -- No --> K[Display "Your guess is Correct!"]
-    K --> L[Print "You have made " + count + " number of guesses"]
+    H -- No --> K[/Display "Your guess is Correct!"/]
+    K --> L[/Display "You have made " + count + " number of guesses"/]
     L --> M(Stop)
 ```
 
